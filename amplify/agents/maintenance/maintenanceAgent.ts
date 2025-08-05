@@ -28,7 +28,7 @@ export function maintenanceAgentBuilder(scope: Construct, props: AgentProps) {
     const stackName = cdk.Stack.of(scope).stackName;
     const stackUUID = cdk.Names.uniqueResourceName(scope, { maxLength: 3 }).toLowerCase().replace(/[^a-z0-9-_]/g, '').slice(-3);
     const defaultDatabaseName = 'maintdb';
-    const foundationModel = 'us.amazon.nova-premier-v1:0';
+    const foundationModel = 'amazon.nova-premier-v1:0';
     //const foundationModel = 'anthropic.claude-3-sonnet-20240229-v1:0';
     
     const agentName = `A4E-Maintenance-${stackUUID}`;
